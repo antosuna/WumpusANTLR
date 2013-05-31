@@ -1,0 +1,77 @@
+// $ANTLR 2.7.6 (2005-12-22): "Anasint.g" -> "Anasint.java"$
+
+	// Para leer del teclado
+	import java.util.Scanner;
+	import java.awt.*;
+	import java.util.Vector;
+	import java.util.List;
+	import java.util.ArrayList;
+
+public interface AnasintTokenTypes {
+	int EOF = 1;
+	int NULL_TREE_LOOKAHEAD = 3;
+	int PUNTO_COMA = 4;
+	int CONFIG = 5;
+	int FIN_CONFIG = 6;
+	int JUEGO = 7;
+	int FIN_JUEGO = 8;
+	int SET_TABLERO = 9;
+	int PARENTESIS_IZ = 10;
+	int COMA = 11;
+	int PARENTESIS_DE = 12;
+	int SET_INICIO = 13;
+	int SET_FIN = 14;
+	int SET_TESORO = 15;
+	int SET_WUMPUS = 16;
+	int SET_POZO = 17;
+	int SET_FLECHA = 18;
+	int SET_AMBROSIA = 19;
+	int SET_MINA = 20;
+	int MOSTRAR_TABLERO = 21;
+	int MOVER_JUGADOR = 22;
+	int COGER_FLECHA = 23;
+	int DISPARAR = 24;
+	int BEBER = 25;
+	int MOSTRAR_FLECHAS = 26;
+	int MOSTRAR_VIDAS = 27;
+	int REINICIAR = 28;
+	int SET_FLECHAS_INI = 29;
+	int SET_VIDAS_INI = 30;
+	int ESTADO_JUEGO = 31;
+	int LUGAR = 32;
+	int BORRAR = 33;
+	int LEER = 34;
+	int IDENTIFICADOR = 35;
+	int LEER_CADENA = 36;
+	int ESCRIBIR = 37;
+	int ESCRIBIR_CADENA = 38;
+	int OP_ASIGNACION = 39;
+	int CONDICIONAL_SI = 40;
+	int ENTONCES = 41;
+	int ALTERNATIVA_SI = 42;
+	int FIN_CONDICIONAL = 43;
+	int MIENTRAS = 44;
+	int HACER = 45;
+	int FIN_MIENTRAS = 46;
+	int REPETIR = 47;
+	int HASTA = 48;
+	int PARA = 49;
+	int DESDE = 50;
+	int PASO = 51;
+	int FIN_PARA = 52;
+	int OP_IGUALDAD = 53;
+	int OP_DISTINTO_QUE = 54;
+	int OP_MAYOR_QUE = 55;
+	int OP_MAYOR_IGUAL = 56;
+	int OP_MENOR_QUE = 57;
+	int OP_MENOR_IGUAL = 58;
+	int OP_MAS = 59;
+	int OP_MENOS = 60;
+	int OP_MODULO = 61;
+	int OP_PRODUCTO = 62;
+	int OP_DIVISION = 63;
+	int OP_CONCAT = 64;
+	int OP_POTENCIA = 65;
+	int NUMERO = 66;
+	int CADENA = 67;
+}

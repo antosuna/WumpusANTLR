@@ -1,0 +1,34 @@
+
+FUENTES_AUXILIARES_LEXICOS = Analex.java AnalexTokenTypes.java 
+FUENTES_AUXILIARES_SINTACTICOS = Anasint.java  AnasintTokenTypes.java
+FUENTES_AUXILIARES_FUNCIONALES = Escenario.java Jugador.java Posicion.java
+CLASS = Analex.class Anasint.class  AnalexTokenTypes.class AnasintTokenTypes.class Test.class  TablaSimbolos.class Variable.class
+SMAP = Analex.smap  Anasint.smap 
+TXT = AnalexTokenTypes.txt AnasintTokenTypes.txt 
+
+Test.class: Test.java TablaSimbolos.java Variable.java $(FUENTES_AUXILIARES_FUNCIONALES)  $(FUENTES_AUXILIARES_LEXICOS) $(FUENTES_AUXILIARES_SINTACTICOS)
+	javac Test.java TablaSimbolos.java Variable.java $(FUENTES_AUXILIARES_FUNCIONALES) $(FUENTES_AUXILIARES_LEXICOS) $(FUENTES_AUXILIARES_SINTACTICOS)
+
+$(FUENTES_AUXILIARES_SINTACTICOS) AnasintTokenTypes.txt: Anasint.g
+	java antlr.Tool Anasint.g
+
+
+$(FUENTES_AUXILIARES_LEXICOS): Analex.g AnasintTokenTypes.txt
+	java antlr.Tool Analex.g
+
+clean:
+	rm -f $(FUENTES_AUXILIARES_LEXICOS) $(FUENTES_AUXILIARES_SINTACTICOS) $(CLASS) $(SMAP) $(TXT);
+
+
+# Creación de la documentación con javadoc
+doc:
+	# Se indica que la documentación se almacene en el directorio "html"
+	# y que muestre el autor, la versión y todos la información privada 
+	javadoc -d html -author -version -private Test.java TablaSimbolos.java Variable.java $(FUENTES_AUXILIARES_FUNCIONALES) $(FUENTES_AUXILIARES_LEXICOS) $(FUENTES_AUXILIARES_SINTACTICOS); \
+	# Se cambia la codificación de las palabras acentuadas 
+	cp colocarAcentos.sh html; cd html/; ./colocarAcentos.sh; rm -f ./html/colocarAcentos.sh; cd ..
+
+
+# Se borra la documentación creada
+clean-doc:
+	 rm -r -f html

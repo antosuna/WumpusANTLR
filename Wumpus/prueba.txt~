@@ -1,0 +1,52 @@
+configuraJuego
+
+setTablero(11,10);
+setInicio(1,2);
+setFin(9,5);
+setTesoro(5,5);
+setWumpus(2,9);
+setMina(6,6);
+setMina(7,7);
+setMina(7,4);
+setPozo(5,10);
+setPozo(8,1);
+setFlecha(1,6);
+setFlecha(2,7);
+setAmbrosia(6,3);
+mostrarTablero();
+
+fin_configuraJuego
+
+jugar
+#moverJugador('izquierda'); #izquierda=arriba
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('izquierda');
+cogerFlecha();
+moverJugador('abajo');
+disparar('derecha');
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('derecha'); #derecha=abajo
+moverJugador('abajo'); #abajo=izquierda
+moverJugador('abajo'); #abajo=izquierda
+moverJugador('izquierda');
+moverJugador('izquierda');
+moverJugador('izquierda');
+moverJugador('izquierda');
+moverJugador('abajo');
+moverJugador('izquierda');
+moverJugador('abajo');
+moverJugador('izquierda');
+moverJugador('izquierda');
+beber();
+moverJugador('derecha');
+moverJugador('abajo');
+moverJugador('izquierda');
+fin_jugar

@@ -1,0 +1,8 @@
+escribir_cadena(' Introduce un numero entero ');
+leer(N);
+factorial = 1;
+para i desde 2 hasta N paso 1 hacer
+	escribir_cadena('funciona el bucle');
+fin_para;
+
+escribir(factorial);

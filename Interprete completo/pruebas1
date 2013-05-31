@@ -1,0 +1,28 @@
+#prueba concatenacion
+
+cadena='hola';
+cadena1='Antonio';
+
+
+cadena=cadena||'3'||cadena1||'4';
+
+escribir_cadena(cadena);
+
+#prueba expresiones numericas
+
+num=3;
+num1=2;
+num3=-1;
+
+num4=2*num3+2;
+
+escribir_cadena('\n');
+
+num2=11__mod 2;
+
+escribir(num2);
+
+escribir_cadena('\n');
+
+escribir(num4);
+

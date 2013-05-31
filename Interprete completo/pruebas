@@ -1,0 +1,60 @@
+escribir_cadena('Empezamos con la prueba');
+
+escribir_cadena('Pulsa una tecla para ejecutar: ');
+leer_cadena(tecla);
+
+num=1;
+
+repetir
+
+	si (num==5) entonces
+		escribir_cadena('Se ha llegado a la mitad');
+	si_no
+		escribir_cadena('Vamos por la iteracion: ');
+		escribir(num);
+	fin_si;
+
+	num=num+1;
+hasta (num==10);
+
+escribir_cadena('Empezamos otro bucle repetir');
+
+escribir_cadena('Pulsa una tecla para ejecutar: ');
+leer_cadena(tecla);
+
+
+repetir
+
+	escribir_cadena('Pulsa 1 para articulo');
+	escribir_cadena('Pulsa 2 para verbo');
+	escribir_cadena('Pulsa 3 para nombre');
+	escribir_cadena('Pulsa 0 para salir');
+
+	leer(opcion);
+
+	#reconoce condicionales sin anidar
+	#problema con anidados
+
+	si (opcion==0) entonces
+		escribir_cadena('Salimos de programa');
+	si_no
+
+		si (opcion==1) entonces
+			escribir_cadena('Articulo: los');
+		si_no
+
+			si (opcion==2) entonces
+				escribir_cadena('Verbo: hablar');
+			si_no
+
+				si (opcion==3) entonces
+					escribir_cadena('Nombre: Antonio');
+				si_no
+					escribir_cadena('Introduce un valor correcto');
+				fin_si;
+			fin_si;
+		fin_si;
+	fin_si;
+
+
+hasta (opcion==0);
